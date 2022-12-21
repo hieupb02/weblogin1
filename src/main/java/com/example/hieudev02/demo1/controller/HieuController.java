@@ -17,6 +17,8 @@ public class HieuController {
     @RequestMapping(value = "saveUser", method = RequestMethod.POST)
 public ModelAndView save(@ModelAttribute User user){
     System.out.println("User from UI"+user);
+
+
     ModelAndView modelAndView = new ModelAndView();
     modelAndView.setViewName(("db"));
     modelAndView.addObject("user",user);
